@@ -1,0 +1,504 @@
+[
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2007",
+    "trx_type_desc": "Ziraat POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "150",
+    "trx_type_subcode": "2",
+    "trx_type_desc": "FATURA ODEME",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "Y"
+  },
+  {
+    "trx_type_code": "050",
+    "trx_type_subcode": "0509",
+    "trx_type_desc": "Ziraat ATM Ziraatpay Kart Para yatırma",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "041",
+    "trx_type_subcode": "2013",
+    "trx_type_desc": "POS Satış iade ",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "0504",
+    "trx_type_desc": "Ziraat ATM Ziraatpay Kart Para çekme İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "8819",
+    "trx_type_desc": "Ziraat ATM QR para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "1104",
+    "trx_type_desc": "BKM ATM Ziraatpay Kart Para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "1142",
+    "trx_type_desc": "CAPİTAL ATM Ziraatpay Kart Para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "25"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "1204",
+    "trx_type_desc": "VİSA ATM Ziraatpay Kart Para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "1304",
+    "trx_type_desc": "EUROPAY ATM Ziraatpay Kart Para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "032",
+    "trx_type_subcode": "1404",
+    "trx_type_desc": "DISCOVER ATM Ziraatpay Kart Para çekme iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2008",
+    "trx_type_desc": "Ziraat POS Ziraatpay Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2012",
+    "trx_type_desc": "SANAL POS Ecommerce Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "10"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2014",
+    "trx_type_desc": "POS  Satış iade İptal",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2018",
+    "trx_type_desc": "POS Mail Order  İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2108",
+    "trx_type_desc": "BKM POS Ziraatpay Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2112",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2118",
+    "trx_type_desc": "NOT ONUS Mail Order İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2148",
+    "trx_type_desc": "CAPİTAL POS Ziraatpay Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "26"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2208",
+    "trx_type_desc": "VİSA POS Ziraatpay Satış  iptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2212",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2218",
+    "trx_type_desc": "NOT ONUS Mail Order  İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2308",
+    "trx_type_desc": "EUROPAY POS Ziraatpay Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2312",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2318",
+    "trx_type_desc": "NOT ONUS Mail Order  İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2508",
+    "trx_type_desc": "DİSCOVER POS Ziraatpay Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2612",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2618",
+    "trx_type_desc": "NOT ONUS Mail Order  İptal",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "042",
+    "trx_type_subcode": "2644",
+    "trx_type_desc": "POS  Taksitli satış iade İptal",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "052",
+    "trx_type_subcode": "0510",
+    "trx_type_desc": "Ziraat ATM Ziraatpay Kart Para yatırma İptal",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "8818",
+    "trx_type_desc": "Ziraat ATM QR para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "050",
+    "trx_type_subcode": "8820",
+    "trx_type_desc": "Ziraat ATM QR para yatırma",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "052",
+    "trx_type_subcode": "8821",
+    "trx_type_desc": "Ziraat ATM QR para yatırma iptal",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "0503",
+    "trx_type_desc": "Ziraat ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "01"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "1103",
+    "trx_type_desc": "BKM ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "1203",
+    "trx_type_desc": "VİSA ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "1303",
+    "trx_type_desc": "EUROPAY ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "1403",
+    "trx_type_desc": "DISCOVER ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "1141",
+    "trx_type_desc": "CAPİTAL ATM Ziraatpay Kart Para çekme",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "25"
+  },
+  {
+    "trx_type_code": "072",
+    "trx_type_subcode": "2",
+    "trx_type_desc": "HAVALE / EFT GELEN",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2107",
+    "trx_type_desc": "BKM POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2207",
+    "trx_type_desc": "VİSA POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2307",
+    "trx_type_desc": "EUROPAY POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2507",
+    "trx_type_desc": "DİSCOVER POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2147",
+    "trx_type_desc": "CAPİTAL POS Ziraatpay Satış ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "26"
+  },
+  {
+    "trx_type_code": "041",
+    "trx_type_subcode": "2643",
+    "trx_type_desc": "POS Taksitli satış iade ",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2011",
+    "trx_type_desc": "SANAL POS Ecommerce Satış",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "10"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2111",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2211",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2311",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2611",
+    "trx_type_desc": "NOT ONUS Ecommerce Satış",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2017",
+    "trx_type_desc": "POS Mail Order",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "03"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2117",
+    "trx_type_desc": "NOT ONUS Mail Order  ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "04"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2217",
+    "trx_type_desc": "NOT ONUS Mail Order  ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "05"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2317",
+    "trx_type_desc": "NOT ONUS Mail Order  ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "06"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "2617",
+    "trx_type_desc": "NOT ONUS Mail Order  ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N",
+    "trx_term_source_code": "35"
+  },
+  {
+    "trx_type_code": "050",
+    "trx_type_subcode": "0",
+    "trx_type_desc": "PARA YATIRMA",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "070",
+    "trx_type_subcode": "2",
+    "trx_type_desc": "CUZDANDAN HAVALE / EFT GONDERICI",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "Y"
+  },
+  {
+    "trx_type_code": "150",
+    "trx_type_subcode": "1",
+    "trx_type_desc": "KREDİ KARTI BORÇ ÖDEME",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "040",
+    "trx_type_subcode": "0",
+    "trx_type_desc": "SATIŞ",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "070",
+    "trx_type_subcode": "1",
+    "trx_type_desc": "CUZDANDAN CUZDANA TRANSFER GONDERICI",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "Y"
+  },
+  {
+    "trx_type_code": "072",
+    "trx_type_subcode": "1",
+    "trx_type_desc": "CUZDANDAN CUZDANA TRANSFER ALICI",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "030",
+    "trx_type_subcode": "0",
+    "trx_type_desc": "PARA ÇEKME",
+    "trx_type_sign": "EKSI",
+    "trx_type_repeatable": "N"
+  },
+  {
+    "trx_type_code": "090",
+    "trx_type_subcode": "0",
+    "trx_type_desc": "YENI CUZDAN OLUSTUR",
+    "trx_type_sign": "ARTI",
+    "trx_type_repeatable": "N"
+  }
+]

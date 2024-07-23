@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01",
+    "label": "ATM"
+  },
+  {
+    "id": "02",
+    "label": "Branch"
+  },
+  {
+    "id": "03",
+    "label": "POS"
+  },
+  {
+    "id": "04",
+    "label": "BKM"
+  },
+  {
+    "id": "05",
+    "label": "VISA"
+  },
+  {
+    "id": "06",
+    "label": "EUROPAY"
+  },
+  {
+    "id": "07",
+    "label": "Credit Cards / ATM center"
+  },
+  {
+    "id": "08",
+    "label": "Smart Phone"
+  },
+  {
+    "id": "09",
+    "label": "Internet"
+  },
+  {
+    "id": "10",
+    "label": "Call Center"
+  },
+  {
+    "id": "25",
+    "label": "Capital Atm"
+  },
+  {
+    "id": "26",
+    "label": "Capital Pos"
+  },
+  {
+    "id": "32",
+    "label": "Tam Atm"
+  },
+  {
+    "id": "35",
+    "label": "Discover"
+  },
+  {
+    "id": "99",
+    "label": "Unknown"
+  }
+]

@@ -1,0 +1,846 @@
+[
+  {
+    "id": "BD",
+    "label": "Bangladeş"
+  },
+  {
+    "id": "BE",
+    "label": "Belçika"
+  },
+  {
+    "id": "BF",
+    "label": "Burkina Faso"
+  },
+  {
+    "id": "BG",
+    "label": "Bulgaristan"
+  },
+  {
+    "id": "BA",
+    "label": "Bosna Hersek"
+  },
+  {
+    "id": "BB",
+    "label": "Barbados"
+  },
+  {
+    "id": "WF",
+    "label": "Wallis ve Futuna"
+  },
+  {
+    "id": "BL",
+    "label": "Saint Barthelemy"
+  },
+  {
+    "id": "BM",
+    "label": "Bermuda"
+  },
+  {
+    "id": "BN",
+    "label": "Brunei"
+  },
+  {
+    "id": "BO",
+    "label": "Bolivya"
+  },
+  {
+    "id": "BH",
+    "label": "Bahreyn"
+  },
+  {
+    "id": "BI",
+    "label": "Burundi"
+  },
+  {
+    "id": "BJ",
+    "label": "Benin"
+  },
+  {
+    "id": "BT",
+    "label": "Butan"
+  },
+  {
+    "id": "JM",
+    "label": "Jamaika"
+  },
+  {
+    "id": "BV",
+    "label": "Bouvet Adası"
+  },
+  {
+    "id": "BW",
+    "label": "Botsvana"
+  },
+  {
+    "id": "WS",
+    "label": "Samoa"
+  },
+  {
+    "id": "BQ",
+    "label": "Bonaire, Saint Eustatius ve Saba"
+  },
+  {
+    "id": "BR",
+    "label": "Brezilya"
+  },
+  {
+    "id": "BS",
+    "label": "Bahamalar"
+  },
+  {
+    "id": "JE",
+    "label": "Jersey"
+  },
+  {
+    "id": "BY",
+    "label": "Beyaz Rusya"
+  },
+  {
+    "id": "BZ",
+    "label": "Belize"
+  },
+  {
+    "id": "RU",
+    "label": "Rusya"
+  },
+  {
+    "id": "RW",
+    "label": "Ruanda"
+  },
+  {
+    "id": "RS",
+    "label": "Sırbistan"
+  },
+  {
+    "id": "TL",
+    "label": "Doğu Timor"
+  },
+  {
+    "id": "RE",
+    "label": "Réunion"
+  },
+  {
+    "id": "TM",
+    "label": "Türkmenistan"
+  },
+  {
+    "id": "TJ",
+    "label": "Tacikistan"
+  },
+  {
+    "id": "RO",
+    "label": "Romanya"
+  },
+  {
+    "id": "TK",
+    "label": "Tokelau"
+  },
+  {
+    "id": "GW",
+    "label": "Gine-Bissau"
+  },
+  {
+    "id": "GU",
+    "label": "Guam"
+  },
+  {
+    "id": "GT",
+    "label": "Guatemala"
+  },
+  {
+    "id": "GS",
+    "label": "Güney Georgia ve Güney Sandviç Adaları"
+  },
+  {
+    "id": "GR",
+    "label": "Yunanistan"
+  },
+  {
+    "id": "GQ",
+    "label": "Ekvator Ginesi"
+  },
+  {
+    "id": "GP",
+    "label": "Guadeloupe"
+  },
+  {
+    "id": "JP",
+    "label": "Japonya"
+  },
+  {
+    "id": "GY",
+    "label": "Guyana"
+  },
+  {
+    "id": "GG",
+    "label": "Guernsey"
+  },
+  {
+    "id": "GF",
+    "label": "Fransız Guyanası"
+  },
+  {
+    "id": "GE",
+    "label": "Gürcistan"
+  },
+  {
+    "id": "GD",
+    "label": "Grenada"
+  },
+  {
+    "id": "GB",
+    "label": "Birleşik Krallık"
+  },
+  {
+    "id": "GA",
+    "label": "Gabon"
+  },
+  {
+    "id": "SV",
+    "label": "El Salvador"
+  },
+  {
+    "id": "GN",
+    "label": "Gine"
+  },
+  {
+    "id": "GM",
+    "label": "Gambiya"
+  },
+  {
+    "id": "GL",
+    "label": "Grönland"
+  },
+  {
+    "id": "GI",
+    "label": "Cebelitarık"
+  },
+  {
+    "id": "GH",
+    "label": "Gana"
+  },
+  {
+    "id": "OM",
+    "label": "Umman"
+  },
+  {
+    "id": "TN",
+    "label": "Tunus"
+  },
+  {
+    "id": "JO",
+    "label": "Ürdün"
+  },
+  {
+    "id": "IK",
+    "label": "Hırvatistan"
+  },
+  {
+    "id": "HT",
+    "label": "Haiti"
+  },
+  {
+    "id": "HU",
+    "label": "Macaristan"
+  },
+  {
+    "id": "HK",
+    "label": "Hong Kong"
+  },
+  {
+    "id": "HN",
+    "label": "Honduras"
+  },
+  {
+    "id": "HM",
+    "label": "Heard Adası ve McDonald Adaları"
+  },
+  {
+    "id": "VE",
+    "label": "Venezüella"
+  },
+  {
+    "id": "PR",
+    "label": "Porto Riko"
+  },
+  {
+    "id": "PW",
+    "label": "Palau"
+  },
+  {
+    "id": "PT",
+    "label": "Portekiz"
+  },
+  {
+    "id": "SJ",
+    "label": "Svalbard"
+  },
+  {
+    "id": "PY",
+    "label": "Paraguay"
+  },
+  {
+    "id": "IQ",
+    "label": "Irak"
+  },
+  {
+    "id": "PA",
+    "label": "Panama"
+  },
+  {
+    "id": "PF",
+    "label": "Fransız Polinezyası"
+  },
+  {
+    "id": "PG",
+    "label": "Papua Yeni Gine"
+  },
+  {
+    "id": "PE",
+    "label": "Peru"
+  },
+  {
+    "id": "PK",
+    "label": "Pakistan"
+  },
+  {
+    "id": "PH",
+    "label": "Filipinler"
+  },
+  {
+    "id": "PN",
+    "label": "Pitcairn Adaları"
+  },
+  {
+    "id": "PL",
+    "label": "Polonya"
+  },
+  {
+    "id": "PM",
+    "label": "Saint Pierre ve Miquelon"
+  },
+  {
+    "id": "ZM",
+    "label": "Zambiya"
+  },
+  {
+    "id": "EH",
+    "label": "Batı Sahra"
+  },
+  {
+    "id": "EE",
+    "label": "Estonya"
+  },
+  {
+    "id": "EG",
+    "label": "Mısır"
+  },
+  {
+    "id": "ZA",
+    "label": "Güney Afrika"
+  },
+  {
+    "id": "EC",
+    "label": "Ekvador"
+  },
+  {
+    "id": "IT",
+    "label": "İtalya"
+  },
+  {
+    "id": "VN",
+    "label": "Vietnam"
+  },
+  {
+    "id": "SB",
+    "label": "Solomon Adaları"
+  },
+  {
+    "id": "ET",
+    "label": "Etiyopya"
+  },
+  {
+    "id": "SO",
+    "label": "Somali"
+  },
+  {
+    "id": "ZW",
+    "label": "Zimbabwe"
+  },
+  {
+    "id": "SA",
+    "label": "Suudi Arabistan"
+  },
+  {
+    "id": "ES",
+    "label": "İspanya"
+  },
+  {
+    "id": "ER",
+    "label": "Eritrea"
+  },
+  {
+    "id": "ME",
+    "label": "Karadağ"
+  },
+  {
+    "id": "MD",
+    "label": "Moldova"
+  },
+  {
+    "id": "MG",
+    "label": "Madagaskar"
+  },
+  {
+    "id": "MF",
+    "label": "Saint Martin"
+  },
+  {
+    "id": "MA",
+    "label": "Fas"
+  },
+  {
+    "id": "MC",
+    "label": "Monaco"
+  },
+  {
+    "id": "UZ",
+    "label": "Özbekistan"
+  },
+  {
+    "id": "MM",
+    "label": "Myanmar"
+  },
+  {
+    "id": "ML",
+    "label": "Mali"
+  },
+  {
+    "id": "MO",
+    "label": "Macao"
+  },
+  {
+    "id": "MN",
+    "label": "Moğolistan"
+  },
+  {
+    "id": "MH",
+    "label": "Marshall Adaları"
+  },
+  {
+    "id": "MK",
+    "label": "Makedonya"
+  },
+  {
+    "id": "MU",
+    "label": "Mauritius"
+  },
+  {
+    "id": "MT",
+    "label": "Malta"
+  },
+  {
+    "id": "MW",
+    "label": "Malavi"
+  },
+  {
+    "id": "MV",
+    "label": "Maldivler"
+  },
+  {
+    "id": "MQ",
+    "label": "Martinik"
+  },
+  {
+    "id": "MP",
+    "label": "Kuzey Mariana Adaları"
+  },
+  {
+    "id": "MS",
+    "label": "Montserrat"
+  },
+  {
+    "id": "MR",
+    "label": "Moritanya"
+  },
+  {
+    "id": "IM",
+    "label": "Isle of Man"
+  },
+  {
+    "id": "UG",
+    "label": "Uganda"
+  },
+  {
+    "id": "TZ",
+    "label": "Tanzanya"
+  },
+  {
+    "id": "MY",
+    "label": "Malezya"
+  },
+  {
+    "id": "MX",
+    "label": "Meksika"
+  },
+  {
+    "id": "IL",
+    "label": "İsrail"
+  },
+  {
+    "id": "FR",
+    "label": "Fransa"
+  },
+  {
+    "id": "IO",
+    "label": "İngiliz Hint Okyanusu Bölgesi"
+  },
+  {
+    "id": "SH",
+    "label": "Saint Helena"
+  },
+  {
+    "id": "FI",
+    "label": "Finlandiya"
+  },
+  {
+    "id": "FJ",
+    "label": "Fiji"
+  },
+  {
+    "id": "FK",
+    "label": "Falkland Adaları"
+  },
+  {
+    "id": "FM",
+    "label": "Mikronezya"
+  },
+  {
+    "id": "FO",
+    "label": "Faroe Adaları"
+  },
+  {
+    "id": "NI",
+    "label": "Nikaragua"
+  },
+  {
+    "id": "NL",
+    "label": "Hollanda"
+  },
+  {
+    "id": "NO",
+    "label": "Norveç"
+  },
+  {
+    "id": "NA",
+    "label": "Namibya"
+  },
+  {
+    "id": "VU",
+    "label": "Vanuatu"
+  },
+  {
+    "id": "NC",
+    "label": "Yeni Kaledonya"
+  },
+  {
+    "id": "NE",
+    "label": "Nijer"
+  },
+  {
+    "id": "NF",
+    "label": "Norfolk Adası"
+  },
+  {
+    "id": "NG",
+    "label": "Nijerya"
+  },
+  {
+    "id": "NZ",
+    "label": "Yeni Zelanda"
+  },
+  {
+    "id": "NP",
+    "label": "Nepal"
+  },
+  {
+    "id": "NR",
+    "label": "Nauru"
+  },
+  {
+    "id": "NU",
+    "label": "Niue"
+  },
+  {
+    "id": "CK",
+    "label": "Cook Adaları"
+  },
+  {
+    "id": "XK",
+    "label": "Kosova"
+  },
+  {
+    "id": "CI",
+    "label": "Fildişi Sahilleri"
+  },
+  {
+    "id": "CH",
+    "label": "İsviçre"
+  },
+  {
+    "id": "CO",
+    "label": "Kolombiya"
+  },
+  {
+    "id": "CN",
+    "label": "Çin"
+  },
+  {
+    "id": "CM",
+    "label": "Kamerun"
+  },
+  {
+    "id": "CL",
+    "label": "Şili"
+  },
+  {
+    "id": "CC",
+    "label": "Cocos Adaları"
+  },
+  {
+    "id": "CA",
+    "label": "Kanada"
+  },
+  {
+    "id": "CG",
+    "label": "Kongo Cumhuriyeti"
+  },
+  {
+    "id": "CF",
+    "label": "Orta Afrika Cumhuriyeti"
+  },
+  {
+    "id": "CD",
+    "label": "Demokratik Kongo Cumhuriyeti"
+  },
+  {
+    "id": "CZ",
+    "label": "Çek Cumhuriyeti"
+  },
+  {
+    "id": "CY",
+    "label": "Kıbrıs"
+  },
+  {
+    "id": "CX",
+    "label": "Noel Adası"
+  },
+  {
+    "id": "CR",
+    "label": "Kosta Rika"
+  },
+  {
+    "id": "CW",
+    "label": "Curacao"
+  },
+  {
+    "id": "CV",
+    "label": "Cape Verde"
+  },
+  {
+    "id": "CU",
+    "label": "Küba"
+  },
+  {
+    "id": "SZ",
+    "label": "Svaziland"
+  },
+  {
+    "id": "SY",
+    "label": "Suriye"
+  },
+  {
+    "id": "SX",
+    "label": "Sint Maarten"
+  },
+  {
+    "id": "KG",
+    "label": "Kırgızistan"
+  },
+  {
+    "id": "KE",
+    "label": "Kenya"
+  },
+  {
+    "id": "SS",
+    "label": "Güney Sudan"
+  },
+  {
+    "id": "SR",
+    "label": "Surinam"
+  },
+  {
+    "id": "KI",
+    "label": "Kiribati"
+  },
+  {
+    "id": "KH",
+    "label": "Kamboçya"
+  },
+  {
+    "id": "KN",
+    "label": "Saint Kitts ve Nevis"
+  },
+  {
+    "id": "KM",
+    "label": "Komor"
+  },
+  {
+    "id": "ST",
+    "label": "Sao Tome ve Principe"
+  },
+  {
+    "id": "SK",
+    "label": "Slovakya"
+  },
+  {
+    "id": "KR",
+    "label": "Güney Kore"
+  },
+  {
+    "id": "SI",
+    "label": "Slovenya"
+  },
+  {
+    "id": "KP",
+    "label": "Kuzey Kore"
+  },
+  {
+    "id": "KW",
+    "label": "Kuveyt"
+  },
+  {
+    "id": "SN",
+    "label": "Senegal"
+  },
+  {
+    "id": "SM",
+    "label": "San Marino"
+  },
+  {
+    "id": "SL",
+    "label": "Sierra Leone"
+  },
+  {
+    "id": "SC",
+    "label": "Seyşel Adaları"
+  },
+  {
+    "id": "KZ",
+    "label": "Kazakistan"
+  },
+  {
+    "id": "KY",
+    "label": "Kayman Adaları"
+  },
+  {
+    "id": "SG",
+    "label": "Singapur"
+  },
+  {
+    "id": "SE",
+    "label": "İsveç"
+  },
+  {
+    "id": "SD",
+    "label": "Sudan"
+  },
+  {
+    "id": "DO",
+    "label": "Dominik Cumhuriyeti"
+  },
+  {
+    "id": "DM",
+    "label": "Dominika"
+  },
+  {
+    "id": "DJ",
+    "label": "Cibuti"
+  },
+  {
+    "id": "DK",
+    "label": "Danimarka"
+  },
+  {
+    "id": "VG",
+    "label": "İngiliz Virgin Adaları"
+  },
+  {
+    "id": "DE",
+    "label": "Almanya"
+  },
+  {
+    "id": "YE",
+    "label": "Yemen"
+  },
+  {
+    "id": "DZ",
+    "label": "Cezayir"
+  },
+  {
+    "id": "ABD",
+    "label": "Amerika Birleşik Devletleri"
+  },
+  {
+    "id": "UY",
+    "label": "Uruguay"
+  },
+  {
+    "id": "YT",
+    "label": "Mayotte"
+  },
+  {
+    "id": "UM",
+    "label": "Birleşik Devletlerin Küçük Dış Adaları"
+  },
+  {
+    "id": "LB",
+    "label": "Lübnan"
+  },
+  {
+    "id": "LC",
+    "label": "Saint Lucia"
+  },
+  {
+    "id": "LA",
+    "label": "Laos"
+  },
+  {
+    "id": "TV",
+    "label": "Tuvalu"
+  },
+  {
+    "id": "TW",
+    "label": "Tayvan"
+  },
+  {
+    "id": "TT",
+    "label": "Trinidad ve Tobago"
+  },
+  {
+    "id": "TR",
+    "label": "Türkiye"
+  },
+  {
+    "id": "LK",
+    "label": "Sri Lanka"
+  },
+  {
+    "id": "LI",
+    "label": "Lihtenştayn"
+  },
+  {
+    "id": "AG",
+    "label": "Letonya"
+  }
+]
