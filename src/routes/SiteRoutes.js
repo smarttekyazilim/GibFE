@@ -37,7 +37,7 @@ const Pages = [
     ],
   },
     {
-    path: "/gib",
+    path: "/",
     element: <AppLayout />,
     children: [
       {
