@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import withTitle from '../../helpers/hoc/withTitle';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import AppBreadcrumb from '../../components/layout/AppBreadcrumb';
@@ -12,21 +12,28 @@ import { enqueueSnackbar } from 'notistack';
 import ThumbUpRoundedIcon from "@mui/icons-material/ThumbUpRounded";
 import ThumbDownRoundedIcon from "@mui/icons-material/ThumbDownRounded";
 import { dateConverter } from "../../helpers/dateHelpers";
-import { gibGetTableSix, gibUpdateTableSix, /*gibGetMenu,*/ } from "../../api/api";
+import { gibGetTableSix, gibUpdateTableSix, gibGetMenu, } from "../../api/api";
 
 
 
 
 const GibPageThree = () => {
-  const breadcrumb = useMemo(
-    () => [
-      {
-        name: <FormattedMessage id="gibPageThree" />,
-        active: true,
-      },
-    ],
-    []
-  );
+
+  //BreadCrumb ismi için
+  const [menuName, setMenuName] = useState([]);
+
+  useEffect(() => {
+    const fetchName = async () => {
+      const response = await gibGetMenu({
+        LANGUAGE: "TR",
+      });
+
+      if (response.STATUS === "success") {
+        setMenuName(response.DATA);
+      }
+    }
+    fetchName();
+  }, []);
 
 
   const HandleSearchClick = useCallback(
@@ -42,94 +49,94 @@ const GibPageThree = () => {
         let RESP_DATA = resp.Data;
         setData(
           RESP_DATA.map((e) => ({
-          RECORD_TYPE: e.RECORD_TYPE,
-          L_REF: e.L_REF || "-",
-          ISLEM_TURU: e.ISLEM_TURU || "-",
-          GON_MUSTERI_MI: e.GON_MUSTERI_MI || "-",
-          GON_OK_VKN: e.GON_OK_VKN || "-",
-          GON_OK_UNVAN: e.GON_OK_UNVAN || "-",
-          GON_TK_VKN: e.GON_TK_VKN || "-",
-          GON_TK_UNVAN: e.GON_TK_UNVAN || "-",
-          GON_GK_AD: e.GON_GK_AD || "-",
-          GON_GK_SOYAD: e.GON_GK_SOYAD || "-",
+            RECORD_TYPE: e.RECORD_TYPE,
+            L_REF: e.L_REF || "-",
+            ISLEM_TURU: e.ISLEM_TURU || "-",
+            GON_MUSTERI_MI: e.GON_MUSTERI_MI || "-",
+            GON_OK_VKN: e.GON_OK_VKN || "-",
+            GON_OK_UNVAN: e.GON_OK_UNVAN || "-",
+            GON_TK_VKN: e.GON_TK_VKN || "-",
+            GON_TK_UNVAN: e.GON_TK_UNVAN || "-",
+            GON_GK_AD: e.GON_GK_AD || "-",
+            GON_GK_SOYAD: e.GON_GK_SOYAD || "-",
 
 
-          GON_GK_KIMLIK_TIPI: e.GON_GK_KIMLIK_TIPI || "-",
-          GON_GK_KIMLIK_NO: e.GON_GK_KIMLIK_NO || "-",
-          GON_GK_UYRUK: e.GON_GK_UYRUK || "-",
-          GON_ADRES: e.GON_ADRES || "-",
-          GON_ILCE_ADI: e.GON_ILCE_ADI || "-",
-          GON_POSTA_KOD: e.GON_POSTA_KOD || "-",
-          GON_IL_KOD: e.GON_IL_KOD || "-",
-          GON_IL_ADI: e.GON_IL_ADI || "-",
-          GON_TEL: e.GON_TEL || "-",
-          GON_EPOSTA: e.GON_EPOSTA || "-",
+            GON_GK_KIMLIK_TIPI: e.GON_GK_KIMLIK_TIPI || "-",
+            GON_GK_KIMLIK_NO: e.GON_GK_KIMLIK_NO || "-",
+            GON_GK_UYRUK: e.GON_GK_UYRUK || "-",
+            GON_ADRES: e.GON_ADRES || "-",
+            GON_ILCE_ADI: e.GON_ILCE_ADI || "-",
+            GON_POSTA_KOD: e.GON_POSTA_KOD || "-",
+            GON_IL_KOD: e.GON_IL_KOD || "-",
+            GON_IL_ADI: e.GON_IL_ADI || "-",
+            GON_TEL: e.GON_TEL || "-",
+            GON_EPOSTA: e.GON_EPOSTA || "-",
 
 
-          GON_OK_HES_NO: e.GON_OK_HES_NO || "-",
-          GON_OK_EPARA: e.GON_OK_EPARA || "-",
-          GON_OK_KART_NO: e.GON_OK_KART_NO || "-",
-          GON_BANKA_AD: e.GON_BANKA_AD || "-",
-          GON_BANKA_KOD: e.GON_BANKA_KOD || "-",
-          GON_SUBE_AD: e.GON_SUBE_AD || "-",
-          GON_IBAN: e.GON_IBAN || "-",
-          GON_HES_NO: e.GON_HES_NO || "-",
-          GON_KREDI_KART_NO: e.GON_KREDI_KART_NO || "-",
-          AL_MUSTERI_MI: e.AL_MUSTERI_MI || "-",
+            GON_OK_HES_NO: e.GON_OK_HES_NO || "-",
+            GON_OK_EPARA: e.GON_OK_EPARA || "-",
+            GON_OK_KART_NO: e.GON_OK_KART_NO || "-",
+            GON_BANKA_AD: e.GON_BANKA_AD || "-",
+            GON_BANKA_KOD: e.GON_BANKA_KOD || "-",
+            GON_SUBE_AD: e.GON_SUBE_AD || "-",
+            GON_IBAN: e.GON_IBAN || "-",
+            GON_HES_NO: e.GON_HES_NO || "-",
+            GON_KREDI_KART_NO: e.GON_KREDI_KART_NO || "-",
+            AL_MUSTERI_MI: e.AL_MUSTERI_MI || "-",
 
 
-          AL_OK_VKN: e.AL_OK_VKN || "-",
-          AL_OK_UNVAN: e.AL_OK_UNVAN || "-",
-          AL_GK_AD: e.AL_GK_AD || "-",
-          AL_GK_SOYAD: e.AL_GK_SOYAD || "-",
-          AL_GK_KIMLIK_NO: e.AL_GK_KIMLIK_NO || "-",
-          AL_GK_UYRUK: e.AL_GK_UYRUK || "-",
-          AL_ADRES: e.AL_ADRES || "-",
-          AL_ILCE_ADI: e.AL_ILCE_ADI || "-",
-          AL_POSTA_KOD: e.AL_POSTA_KOD || "-",
-          AL_IL_KOD: e.AL_IL_KOD || "-",
+            AL_OK_VKN: e.AL_OK_VKN || "-",
+            AL_OK_UNVAN: e.AL_OK_UNVAN || "-",
+            AL_GK_AD: e.AL_GK_AD || "-",
+            AL_GK_SOYAD: e.AL_GK_SOYAD || "-",
+            AL_GK_KIMLIK_NO: e.AL_GK_KIMLIK_NO || "-",
+            AL_GK_UYRUK: e.AL_GK_UYRUK || "-",
+            AL_ADRES: e.AL_ADRES || "-",
+            AL_ILCE_ADI: e.AL_ILCE_ADI || "-",
+            AL_POSTA_KOD: e.AL_POSTA_KOD || "-",
+            AL_IL_KOD: e.AL_IL_KOD || "-",
 
 
-          AL_IL_ADI: e.AL_IL_ADI || "-",
-          AL_TEL: e.AL_TEL || "-",
-          AL_EPOSTA: e.AL_EPOSTA || "-",
-          AL_OK_HES_NO: e.AL_OK_HES_NO || "-",
-          AL_OK_EPARA: e.AL_OK_EPARA || "-",
-          AL_OK_KART_NO: e.AL_OK_KART_NO || "-",
-          AL_BANKA_AD: e.AL_BANKA_AD || "-",
-          AL_BANKA_KOD: e.AL_BANKA_KOD || "-",
-          AL_SUBE_AD: e.AL_SUBE_AD || "-",
-          AL_IBAN: e.AL_IBAN || "-",
+            AL_IL_ADI: e.AL_IL_ADI || "-",
+            AL_TEL: e.AL_TEL || "-",
+            AL_EPOSTA: e.AL_EPOSTA || "-",
+            AL_OK_HES_NO: e.AL_OK_HES_NO || "-",
+            AL_OK_EPARA: e.AL_OK_EPARA || "-",
+            AL_OK_KART_NO: e.AL_OK_KART_NO || "-",
+            AL_BANKA_AD: e.AL_BANKA_AD || "-",
+            AL_BANKA_KOD: e.AL_BANKA_KOD || "-",
+            AL_SUBE_AD: e.AL_SUBE_AD || "-",
+            AL_IBAN: e.AL_IBAN || "-",
 
 
-          AL_HES_NO: e.AL_HES_NO || "-",
-          AL_KREDI_KART_NO: e.AL_KREDI_KART_NO || "-",
-          AL_DEBIT_KART_NO: e.AL_DEBIT_KART_NO || "-",
-          IS_TAR: e.IS_TAR || "-",
-          IS_SAAT: e.IS_SAAT || "-",
-          ODENME_TAR: e.ODENME_TAR || "-",
-          ISLEM_IP: e.ISLEM_IP || "-",
-          ISLEM_TUTAR: e.ISLEM_TUTAR || "-",
-          ASIL_TUTAR: e.ASIL_TUTAR || "-",
-          PARA_BIRIM: e.PARA_BIRIM || "-",
+            AL_HES_NO: e.AL_HES_NO || "-",
+            AL_KREDI_KART_NO: e.AL_KREDI_KART_NO || "-",
+            AL_DEBIT_KART_NO: e.AL_DEBIT_KART_NO || "-",
+            IS_TAR: e.IS_TAR || "-",
+            IS_SAAT: e.IS_SAAT || "-",
+            ODENME_TAR: e.ODENME_TAR || "-",
+            ISLEM_IP: e.ISLEM_IP || "-",
+            ISLEM_TUTAR: e.ISLEM_TUTAR || "-",
+            ASIL_TUTAR: e.ASIL_TUTAR || "-",
+            PARA_BIRIM: e.PARA_BIRIM || "-",
 
 
-          BRUT_KOM_TUT: e.BRUT_KOM_TUT || "-",
-          IS_GON_NEDENI: e.IS_GON_NEDENI || "-",
-          ISLEM_KNL: e.ISLEM_KNL || "-",
-          SUBE_VKN: e.SUBE_VKN || "-",
-          SUBE_UNVAN: e.SUBE_UNVAN || "-",
-          SUBE_IL_ADI: e.SUBE_IL_ADI || "-",
-          KUR_ACIKLAMA: e.KUR_ACIKLAMA || "-",
-          MUS_ACIKLAMA: e.MUS_ACIKLAMA || "-",
-          KURUM_KOD: e.KURUM_KOD || "-",
-          CREATED_DATE: e.CREATED_DATE || "-",
+            BRUT_KOM_TUT: e.BRUT_KOM_TUT || "-",
+            IS_GON_NEDENI: e.IS_GON_NEDENI || "-",
+            ISLEM_KNL: e.ISLEM_KNL || "-",
+            SUBE_VKN: e.SUBE_VKN || "-",
+            SUBE_UNVAN: e.SUBE_UNVAN || "-",
+            SUBE_IL_ADI: e.SUBE_IL_ADI || "-",
+            KUR_ACIKLAMA: e.KUR_ACIKLAMA || "-",
+            MUS_ACIKLAMA: e.MUS_ACIKLAMA || "-",
+            KURUM_KOD: e.KURUM_KOD || "-",
+            CREATED_DATE: e.CREATED_DATE || "-",
 
-          UPDATED_DATE: e.UPDATED_DATE || "-",
-          DELETED_FLAG: e.DELETED_FLAG || "-",
-          GNDRM_TAR: e.GNDRM_TAR || "-",
-          IS_SEND: e.IS_SEND || "-",
-        }))
+            UPDATED_DATE: e.UPDATED_DATE || "-",
+            DELETED_FLAG: e.DELETED_FLAG || "-",
+            GNDRM_TAR: e.GNDRM_TAR || "-",
+            IS_SEND: e.IS_SEND || "-",
+          }))
         );
       });
       setLoading(false);
@@ -662,12 +669,33 @@ const GibPageThree = () => {
   console.log(selectedData);
 
 
-
   //START - Update & Delete Actions
   const [editDeleteSelectedRow, setEditDeleteSelectedRow] = useState({
     operation: "",
     rows: [],
   });
+
+
+  //Api Name breadcrumb
+  const breadcrumb = useMemo(() => {
+    const menuItem = menuName.find(i => i.ID === 3);
+    return [
+      {
+        name: menuItem ? menuItem.NAME : <FormattedMessage id="gibPageThree" />,
+        active: true,
+      },
+    ];
+  }, [menuName]);
+
+  // const breadcrumb = useMemo(
+  //   () => [
+  //     {
+  //       name: <FormattedMessage id="gibPageThree" />,
+  //       active: true,
+  //     },
+  //   ],
+  //   []
+  // );
 
   //Seçileni Resetleme
   const resetSelected = useCallback(() => {
@@ -691,7 +719,7 @@ const GibPageThree = () => {
     let i = 0;
     let status = true;
     while (i < editDeleteSelectedRow.rows.length) {
-      let result =  await gibUpdateTableSix({
+      let result = await gibUpdateTableSix({
         RECORD_TYPE: editDeleteSelectedRow.rows[0].L_REF,
         L_REF: editDeleteSelectedRow.rows[0].L_REF,
         ISLEM_TURU: editDeleteSelectedRow.rows[0].ISLEM_TURU,
@@ -776,11 +804,11 @@ const GibPageThree = () => {
         GNDRM_TAR: editDeleteSelectedRow.rows[0].GNDRM_TAR,
         IS_SEND: editDeleteSelectedRow.rows[0].IS_SEND,
       });
-      if(result.STATUS === "success"){
+      if (result.STATUS === "success") {
         i++;
       } else {
         status = false;
-        enqueueSnackbar(result.RESPONSECODEDESC, {variant: "error"});
+        enqueueSnackbar(result.RESPONSECODEDESC, { variant: "error" });
         break;
       }
     }

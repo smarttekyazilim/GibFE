@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import AppBreadcrumb from '../../components/layout/AppBreadcrumb';
 import GetDataArea from '../../components/GetDataArea';
@@ -13,20 +13,27 @@ import { dateConverter } from "../../helpers/dateHelpers";
 import { useAuth } from '../../context/AuthContext';
 import ThumbUpRoundedIcon from "@mui/icons-material/ThumbUpRounded";
 import ThumbDownRoundedIcon from "@mui/icons-material/ThumbDownRounded";
-import { gibGetTableFour, gibUpdateTableFour, /*gibGetMenu,*/ } from "../../api/api";
+import { gibGetTableFour, gibUpdateTableFour, gibGetMenu, } from "../../api/api";
 
 
 const GibPageOne = () => {
-  const breadcrumb = useMemo(
-    () => [
-      {
-        //Buraya api'den gelen isim çekilecek
-        name: <FormattedMessage id="gibPageOne" />,
-        active: true,
-      },
-    ],
-    []
-  );
+
+  //BreadCrumb ismi için
+  const [menuName, setMenuName] = useState([]);
+  
+  useEffect(() => {
+    const fetchName = async () => {
+      const response = await gibGetMenu({
+        LANGUAGE: "TR",
+      });
+
+      if (response.STATUS === "success") {
+        setMenuName(response.DATA);
+      }
+    }
+    fetchName();
+  }, []);
+
 
   //MRTTable
   // const [data, setData] = useState([]);
@@ -44,6 +51,28 @@ const GibPageOne = () => {
   console.log("user", user);
 
   console.log("selectedData:", selectedData);
+
+
+  //Api Name breadcrumb
+  const breadcrumb = useMemo(() => {
+    const menuItem = menuName.find(i => i.ID === 1);
+    return [
+      {
+        name: menuItem ? menuItem.NAME :<FormattedMessage id="gibPageOne" />,
+        active: true,
+      },
+    ];
+  }, [menuName]);
+  // const breadcrumb = useMemo(
+  //   () => [
+  //     {
+  //       //Buraya api'den gelen isim çekilecek
+  //       name: <FormattedMessage id="gibPageOne" />,
+  //       active: true,
+  //     },
+  //   ],
+  //   []
+  // );
 
   const HandleSearchClick = useCallback(
     async (startDate, endDate, tckn, _w, _c, iref) => {

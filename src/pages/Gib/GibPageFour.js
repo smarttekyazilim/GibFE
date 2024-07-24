@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import withTitle from '../../helpers/hoc/withTitle';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import AppBreadcrumb from '../../components/layout/AppBreadcrumb';
@@ -12,21 +12,30 @@ import { enqueueSnackbar } from 'notistack';
 import ThumbUpRoundedIcon from "@mui/icons-material/ThumbUpRounded";
 import ThumbDownRoundedIcon from "@mui/icons-material/ThumbDownRounded";
 import { dateConverter } from "../../helpers/dateHelpers";
-import { gibGetTableSeven, gibUpdateTableSeven,  /*gibGetMenu,*/ } from "../../api/api";
+import { gibGetTableSeven, gibUpdateTableSeven, gibGetMenu, } from "../../api/api";
 
 
 const GibPageFour = () => {
-  const breadcrumb = useMemo(
-    () => [
-      {
-        name: <FormattedMessage id="gibPageFour" />,
-        active: true,
-      },
-    ],
-    []
-  );
+
+  //BreadCrumb ismi için
+  const [menuName, setMenuName] = useState([]);
+
+  useEffect(() => {
+    const fetchName = async () => {
+      const response = await gibGetMenu({
+        LANGUAGE: "TR",
+      });
+
+      if (response.STATUS === "success") {
+        setMenuName(response.DATA);
+      }
+    }
+    fetchName();
+  }, []);
 
 
+
+  //GetDataArea
   const HandleSearchClick = useCallback(
     async (startDate, endDate, tckn, _w, _c, iref) => {
       setLoading(true);
@@ -66,7 +75,7 @@ const GibPageFour = () => {
             KUR_ACIKLAMA: e.KUR_ACIKLAMA || "-",
             KURUM_KOD: e.KURUM_KOD || "-",
             GNDRM_TAR: e.GNDRM_TAR || "-",
-         
+
             IS_SEND: e.IS_SEND || "-",
             DELETED_FLAG: e.DELETED_FLAG || "-",
             TRX_ID: e.TRX_ID || "-",
@@ -315,6 +324,27 @@ const GibPageFour = () => {
     rows: [],
   });
 
+  //Api Name breadcrumb
+  const breadcrumb = useMemo(() => {
+    const menuItem = menuName.find(i => i.ID === 4);
+    return [
+      {
+        name: menuItem ? menuItem.NAME : <FormattedMessage id="gibPageFour" />,
+        active: true,
+      },
+    ];
+  }, [menuName]);
+
+  // const breadcrumb = useMemo(
+  //   () => [
+  //     {
+  //       name: <FormattedMessage id="gibPageFour" />,
+  //       active: true,
+  //     },
+  //   ],
+  //   []
+  // );
+
   //Seçileni Resetleme
   const resetSelected = useCallback(() => {
     setEditDeleteSelectedRow((prev) => ({
@@ -335,7 +365,7 @@ const GibPageFour = () => {
     let i = 0;
     let status = true;
     while (i < editDeleteSelectedRow.rows.length) {
-      let result =  await gibUpdateTableSeven({
+      let result = await gibUpdateTableSeven({
         RECORD_TYPE: editDeleteSelectedRow.rows[0].RECORD_TYPE,
         L_REF: editDeleteSelectedRow.rows[0].L_REF,
         ISLEM_TURU: editDeleteSelectedRow.rows[0].ISLEM_TURU,
@@ -369,11 +399,11 @@ const GibPageFour = () => {
         CREATED_DATE: editDeleteSelectedRow.rows[0].CREATED_DATE,
         UPDATED_DATE: editDeleteSelectedRow.rows[0].UPDATED_DATE,
       });
-      if(result.STATUS === "success"){
+      if (result.STATUS === "success") {
         i++;
       } else {
         status = false;
-        enqueueSnackbar(result.RESPONSECODEDESC, {variant: "error"});
+        enqueueSnackbar(result.RESPONSECODEDESC, { variant: "error" });
         break;
       }
     }

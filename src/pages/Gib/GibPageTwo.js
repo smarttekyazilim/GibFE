@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import withTitle from '../../helpers/hoc/withTitle';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import AppBreadcrumb from '../../components/layout/AppBreadcrumb';
@@ -12,20 +12,29 @@ import { enqueueSnackbar } from 'notistack';
 import { dateConverter } from "../../helpers/dateHelpers";
 import ThumbUpRoundedIcon from "@mui/icons-material/ThumbUpRounded";
 import ThumbDownRoundedIcon from "@mui/icons-material/ThumbDownRounded";
-import { gibGetTableFive, gibUpdateTableFive, /* gibGetMenu,*/ } from "../../api/api";
+import { gibGetTableFive, gibUpdateTableFive, gibGetMenu, } from "../../api/api";
 
 
 
 const GibPageTwo = () => {
-  const breadcrumb = useMemo(
-    () => [
-      {
-        name: <FormattedMessage id="gibPageTwo" />,
-        active: true,
-      },
-    ],
-    []
-  );
+
+  //BreadCrumb ismi için
+  const [menuName, setMenuName] = useState([]);
+
+  useEffect(() => {
+    const fetchName = async () => {
+      const response = await gibGetMenu({
+        LANGUAGE: "TR",
+      });
+
+      if (response.STATUS === "success") {
+        setMenuName(response.DATA);
+      }
+    }
+    fetchName();
+  }, []);
+
+
 
   //Kimlik Tipi
   const identityType = (value) => {
@@ -342,6 +351,25 @@ const GibPageTwo = () => {
 
   console.log(editDeleteSelectedRow)
 
+  //Api Name breadcrumb
+  const breadcrumb = useMemo(() => {
+    const menuItem = menuName.find(i => i.ID === 2);
+    return [
+      {
+        name: menuItem ? menuItem.NAME : <FormattedMessage id="gibPageTwo" />,
+        active: true,
+      },
+    ];
+  }, [menuName]);
+  // const breadcrumb = useMemo(
+  //   () => [
+  //     {
+  //       name: <FormattedMessage id="gibPageTwo" />,
+  //       active: true,
+  //     },
+  //   ],
+  //   []
+  // );
 
   const HandleSearchClick = useCallback(
     async (startDate, endDate, tckn, _w, _c, iref) => {
