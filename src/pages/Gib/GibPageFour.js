@@ -31,7 +31,7 @@ const GibPageFour = () => {
     async (startDate, endDate, tckn, _w, _c, iref) => {
       setLoading(true);
       await gibGetTableSeven({
-        TCKN: "",
+        TCKN: tckn || "",
         CARD_NUMBER: "",
         WALLET_NUMBER: "",
         PAGE_NUMBER: "",

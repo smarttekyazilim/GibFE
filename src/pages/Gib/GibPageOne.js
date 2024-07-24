@@ -59,7 +59,7 @@ const GibPageOne = () => {
         setData(
           RESP_DATA.map((e) => ({
             RECORD_TYPE: e.RECORD_TYPE,
-            L_REF: e.L_REF || "-",
+            L_REF: e.L_REF,
             ISLEM_TURU: e?.ISLEM_TURU || "-",
             HSTK_VKN: e?.HSTK_VKN || "-",
             HSTK_UNVAN: e?.HSTK_UNVAN || "-",

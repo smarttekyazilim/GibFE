@@ -10,7 +10,7 @@ import UpdateDialog from "../../components/UpdateDialog";
 import { enqueueSnackbar } from 'notistack';
 import UpdateGibError from './UpdateGibError';
 import { dateConverter } from "../../helpers/dateHelpers";
-// import { gibGetError } from "../../api/api";
+import { gibGetError } from "../../api/api";
 
 
 const GibError = () => {
@@ -26,8 +26,31 @@ const GibError = () => {
 
 
     //GetDataArea
-    const HandleSearchClick = () => { };
-    const HandleDeleteClick = () => {
+    const HandleSearchClick = useCallback(
+        async (startDate, endDate,) => {
+            setLoading(true);
+            await gibGetError({
+            }).then((resp) => {
+                let RESP_DATA = resp.DATA;
+                setData(
+                    RESP_DATA.map((e) => ({
+                        ID: e.ID,
+                        FORM_TYPE: e?.FORM_TYPE || "-",
+                        CODE: e?.CODE || "-",
+                        MESSAGE: e?.MESSAGE || "-",
+                        ERROR_DATE: e?.ERROR_DATE || "-",
+                    }))
+                );
+            });
+            setLoading(false);
+            setSelectedData([]);
+            setEditDeleteSelectedRow({
+                operation: "",
+                rows: [],
+            });
+        }, []);
+
+    const HandleDeleteClick = useCallback(() => {
         setData([]);
         setLoading(false);
         setSelectedData([]);
@@ -35,7 +58,7 @@ const GibError = () => {
             operation: "",
             rows: [],
         });
-    };
+    }, []);
 
     //MRTTable
     // const [data, setData] = useState([]);
@@ -67,7 +90,7 @@ const GibError = () => {
                     const value = cell.getValue();
                     const formattedDate = dateConverter(value, "dateseventeen", "dotdate");
                     return formattedDate;
-                  }
+                }
             },
         ],
         // eslint-disable-next-line
@@ -161,7 +184,7 @@ const GibError = () => {
             <GetDataArea
                 HandleSearchClick={HandleSearchClick}
                 HandleDeleteClick={HandleDeleteClick}
-                // inputsShow={{ tckn: true, iref: true }}
+            // inputsShow={{ tckn: true, iref: true }}
             />
             <MRTTable
                 data={data}
@@ -208,33 +231,33 @@ const testData = {
     "RESPONSECODE": "000",
     "RESPONSECODEDESC": "OK",
     "DATA": [
-      {
-        "ID": 1,
-        "FORM_TYPE": "EPKBB",
-        "CODE": "140",
-        "MESSAGE": "TEST DATA",
-        "ERROR_DATE": "20240708190453436"
-      },
-      {
-        "ID": 2,
-        "FORM_TYPE": "EPKBB",
-        "CODE": "120",
-        "MESSAGE": "TEST",
-        "ERROR_DATE": "20240708190453436"
-      },
-      {
-        "ID": 3,
-        "FORM_TYPE": "EPKBB",
-        "CODE": "120",
-        "MESSAGE": "TEST",
-        "ERROR_DATE": "20240709152511128"
-      },
-      {
-        "ID": 21,
-        "FORM_TYPE": "EPKBB",
-        "CODE": "120",
-        "MESSAGE": "TEST",
-        "ERROR_DATE": "20240718163253534"
-      }
+        {
+            "ID": 1,
+            "FORM_TYPE": "EPKBB",
+            "CODE": "140",
+            "MESSAGE": "TEST DATA",
+            "ERROR_DATE": "20240708190453436"
+        },
+        {
+            "ID": 2,
+            "FORM_TYPE": "EPKBB",
+            "CODE": "120",
+            "MESSAGE": "TEST",
+            "ERROR_DATE": "20240708190453436"
+        },
+        {
+            "ID": 3,
+            "FORM_TYPE": "EPKBB",
+            "CODE": "120",
+            "MESSAGE": "TEST",
+            "ERROR_DATE": "20240709152511128"
+        },
+        {
+            "ID": 21,
+            "FORM_TYPE": "EPKBB",
+            "CODE": "120",
+            "MESSAGE": "TEST",
+            "ERROR_DATE": "20240718163253534"
+        }
     ]
-  }
+}
